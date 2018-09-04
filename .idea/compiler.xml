@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Kafka-train" />
+        <module name="sparkstreaming-train" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Kafka-train" target="1.5" />
+      <module name="sparkstreaming-train" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
