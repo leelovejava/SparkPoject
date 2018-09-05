@@ -5,6 +5,7 @@ import org.apache.spark.SparkConf
 import org.apache.spark.streaming.kafka.KafkaUtils
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
+
 /**
   * spark streaming & kafka -> direct
   */
