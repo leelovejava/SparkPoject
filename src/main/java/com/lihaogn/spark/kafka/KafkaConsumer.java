@@ -1,4 +1,4 @@
-package com.lihaogn.spark.kafka;
+package com.lihaogn.sparkTest.kafka;
 
 import kafka.consumer.Consumer;
 import kafka.consumer.ConsumerConfig;

@@ -1,4 +1,4 @@
-package com.lihaogn.spark.kafka;
+package com.lihaogn.sparkTest.kafka;
 
 /**
  * kafka 常用配置

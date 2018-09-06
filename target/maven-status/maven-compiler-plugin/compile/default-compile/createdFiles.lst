@@ -1,0 +1,5 @@
+com/lihaogn/sparkTest/kafka/KafkaProperties.class
+com/lihaogn/sparkTest/kafka/KafkaProducer.class
+com/lihaogn/sparkTest/kafka/KafkaConsumer.class
+com/lihaogn/sparkTest/kafka/KafkaClientApp.class
+com/lihaogn/spark/project/utils/HBaseUtils.class
