@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.lihaogn.spark</groupId>
-    <artifactId>Kafka-train</artifactId>
+    <artifactId>SparkStreamingTrain</artifactId>
     <version>1.0</version>
     <inceptionYear>2008</inceptionYear>
     <properties>
@@ -11,6 +11,9 @@
         <spark.version>2.2.0</spark.version>
         <hbase.version>1.2.0-cdh5.7.0</hbase.version>
         <hadoop.version>2.6.0-cdh5.7.0</hadoop.version>
+        <lz4.version>1.3.0</lz4.version>
+        <commons-lang3.version>3.5</commons-lang3.version>
+        <flume-ng-log4jappender.version>1.6.0</flume-ng-log4jappender.version>
     </properties>
 
     <!-- cloudera repo-->
@@ -47,7 +50,7 @@
         <dependency>
             <groupId>net.jpountz.lz4</groupId>
             <artifactId>lz4</artifactId>
-            <version>1.3.0</version>
+            <version>${lz4.version}</version>
         </dependency>
 
         <!-- MySQL -->
@@ -78,7 +81,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.5</version>
+            <version>${commons-lang3.version}</version>
         </dependency>
 
         <!-- spark streaming & kafka-->
@@ -91,7 +94,7 @@
         <dependency>
             <groupId>org.apache.flume.flume-ng-clients</groupId>
             <artifactId>flume-ng-log4jappender</artifactId>
-            <version>1.6.0</version>
+            <version>${flume-ng-log4jappender.version}</version>
         </dependency>
 
         <!-- hbase -->
@@ -130,6 +133,7 @@
             <plugin>
                 <groupId>org.scala-tools</groupId>
                 <artifactId>maven-scala-plugin</artifactId>
+                <version>2.11</version>
                 <executions>
                     <execution>
                         <goals>
@@ -148,6 +152,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.10</version>
                 <configuration>
                     <downloadSources>true</downloadSources>
                     <buildcommands>
@@ -173,9 +178,6 @@
                     <scalaVersion>${scala.version}</scalaVersion>
                 </configuration>
             </plugin>
-
-
-
         </plugins>
     </reporting>
 </project>
