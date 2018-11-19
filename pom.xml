@@ -4,6 +4,7 @@
     <groupId>com.lihaogn.spark</groupId>
     <artifactId>SparkStreamingTrain</artifactId>
     <version>1.0</version>
+    <!--项目创建年份，4位数字。当产生版权信息时需要使用这个值-->
     <inceptionYear>2008</inceptionYear>
     <properties>
         <scala.version>2.11.8</scala.version>

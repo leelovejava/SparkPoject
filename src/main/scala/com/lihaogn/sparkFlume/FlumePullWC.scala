@@ -33,6 +33,5 @@ object FlumePullWC {
     ssc.awaitTermination()
 
 
-
   }
 }

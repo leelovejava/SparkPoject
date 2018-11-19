@@ -14,7 +14,7 @@ import java.io.IOException;
 public class HBaseUtils {
 
     HBaseAdmin admin = null;
-    Configuration configuration = null;
+    Configuration configuration;
 
     /**
      * 私有构造方法
@@ -22,8 +22,8 @@ public class HBaseUtils {
     private HBaseUtils() {
 
         configuration = new Configuration();
-        configuration.set("hbase.zookeeper.quorum", "localhost:2181");
-        configuration.set("hbase.rootdir", "hdfs://localhost:8020/hbase");
+        configuration.set("hbase.zookeeper.quorum", "hadoop000:2181");
+        configuration.set("hbase.rootdir", "hdfs://hadoop000:8020/hbase");
 
         try {
             admin = new HBaseAdmin(configuration);
@@ -80,9 +80,6 @@ public class HBaseUtils {
     }
 
     public static void main(String[] args) {
-//        HTable table = HBaseUtils.getInstance().getTable("course_clickcount");
-//        System.out.println(table.getName().getNameAsString());
-
         String tableName = "course_clickcount";
         String rowkey = "20180906_1";
         String cf = "info";
