@@ -9,4 +9,8 @@ use flume & kafka & hbase
 
 [(一)数据清洗+统计访问](https://blog.csdn.net/lihaogn/article/details/82461601)
 
+https://github.com/lihaogm/SparkStreamTrain.git
+
 [(二)数据可视化](https://blog.csdn.net/lihaogn/article/details/82469193)
+
+https://github.com/lihaogm/spark-echarts-log.git
