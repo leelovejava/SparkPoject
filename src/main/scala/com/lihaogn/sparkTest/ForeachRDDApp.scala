@@ -39,6 +39,7 @@ object ForeachRDDApp {
 
   /**
     * 获取MySQL连接
+    *
     * @return
     */
   def createConnection() = {

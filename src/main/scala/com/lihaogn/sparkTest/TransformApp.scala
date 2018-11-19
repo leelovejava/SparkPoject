@@ -17,15 +17,15 @@ object TransformApp {
     /**
       * 构建黑名单
       */
-    val blacks=List("zhangsan","lisi")
-    val blacksRDD=ssc.sparkContext.parallelize(blacks).map(x=>(x,true))
+    val blacks = List("zhangsan", "lisi")
+    val blacksRDD = ssc.sparkContext.parallelize(blacks).map(x => (x, true))
 
-    val lines=ssc.socketTextStream("localhost",6789)
+    val lines = ssc.socketTextStream("localhost", 6789)
 
-    val clicklog=lines.map(x=>(x.split(",")(1),x)).transform(rdd=>{
+    val clicklog = lines.map(x => (x.split(",")(1), x)).transform(rdd => {
       rdd.leftOuterJoin(blacksRDD)
-        .filter(x=>x._2._2.getOrElse(false)!=true)
-        .map(x=>x._2._1)
+        .filter(x => x._2._2.getOrElse(false) != true)
+        .map(x => x._2._1)
     })
 
     clicklog.print()

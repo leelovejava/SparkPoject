@@ -13,13 +13,13 @@ object NetworkWordCount {
 
   def main(args: Array[String]): Unit = {
 
-    val sparkConf=new SparkConf().setMaster("local[2]").setAppName("NetworkWordCount")
+    val sparkConf = new SparkConf().setMaster("local[2]").setAppName("NetworkWordCount")
 
-    val ssc=new StreamingContext(sparkConf,Seconds(5))
+    val ssc = new StreamingContext(sparkConf, Seconds(5))
 
-    val lines=ssc.socketTextStream("localhost",6789)
+    val lines = ssc.socketTextStream("localhost", 6789)
 
-    val result=lines.flatMap(_.split(" ")).map((_,1)).reduceByKey(_+_)
+    val result = lines.flatMap(_.split(" ")).map((_, 1)).reduceByKey(_ + _)
 
     result.print()
 
